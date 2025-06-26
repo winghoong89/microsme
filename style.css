@@ -1,89 +1,171 @@
+/* Reset & Base */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   font-family: 'Inter', sans-serif;
   line-height: 1.6;
-  background: #f9f9f9;
-  color: #333;
+  color: #222;
+  background-color: #fff;
 }
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
 .container {
-  width: 90%;
-  max-width: 960px;
-  margin: auto;
-  padding: 2rem 0;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
 }
+
+/* Header */
 .header {
-  background: #fff;
+  background-color: #f8f9fa;
+  padding: 1.5rem 0;
   border-bottom: 1px solid #eee;
 }
-.header .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.logo {
+
+.header h1 {
+  font-size: 2rem;
   font-weight: 800;
-  font-size: 1.5rem;
+  color: #333;
 }
-.logo span {
+
+.header span {
   color: #007bff;
 }
-nav a {
-  margin-left: 1rem;
-  text-decoration: none;
-  color: #555;
+
+.header nav {
+  margin-top: 0.75rem;
+}
+
+.header nav a {
+  margin: 0 1rem;
   font-weight: 600;
+  color: #444;
 }
-nav a:hover {
-  color: #007bff;
-}
+
+/* Hero */
 .hero {
-  background: #007bff;
-  color: #fff;
-  text-align: center;
+  background: #eaf4ff;
   padding: 4rem 2rem;
 }
+
 .hero h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
 }
+
+.hero p {
+  font-size: 1.125rem;
+  margin-bottom: 2rem;
+}
+
 .cta {
-  display: inline-block;
-  background: #fff;
-  color: #007bff;
+  background: #007bff;
+  color: white;
   padding: 0.75rem 1.5rem;
-  margin-top: 1rem;
-  text-decoration: none;
   border-radius: 8px;
   font-weight: 600;
+  display: inline-block;
+  transition: 0.3s ease;
 }
+
+.cta:hover {
+  background: #005dc1;
+}
+
+/* Sections */
 .section {
-  padding: 3rem 0;
+  padding: 3rem 2rem;
 }
-.section.light {
-  background: #f1f1f1;
-}
+
 .section h3 {
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   margin-bottom: 1rem;
 }
-ul {
-  list-style: none;
-  padding-left: 1rem;
+
+.section p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
 }
-ul li {
+
+.section.light {
+  background-color: #f9f9f9;
+}
+
+/* Features List */
+.features {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+.features li {
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
+}
+
+/* Pricing List */
+#pricing ul {
+  list-style: none;
+  margin-top: 1rem;
+  padding: 0;
+}
+
+#pricing li {
   margin-bottom: 0.5rem;
 }
-.price {
-  font-size: 2rem;
-  color: #007bff;
+
+/* CTA Section */
+.cta-section {
+  background: #007bff;
+  color: white;
 }
-footer {
-  background: #eee;
-  text-align: center;
+
+.cta-section h3,
+.cta-section p {
+  color: white;
+}
+
+.cta-section .cta {
+  background: #fff;
+  color: #007bff;
+  font-weight: 600;
+}
+
+.cta-section .cta:hover {
+  background: #e0e0e0;
+}
+
+/* Footer */
+.footer {
+  background-color: #f1f1f1;
   padding: 1rem;
-  font-size: 0.9rem;
+  text-align: center;
+  font-size: 0.875rem;
+  color: #777;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .header nav a {
+    display: block;
+    margin: 0.5rem 0;
+  }
+
+  .hero h2 {
+    font-size: 1.5rem;
+  }
+
+  .cta {
+    width: 100%;
+    box-sizing: border-box;
+  }
 }
