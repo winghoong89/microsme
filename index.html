@@ -4,50 +4,69 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>MicroSME Store</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/feather-icons"></script>
   <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      margin: 0;
       font-family: 'Poppins', sans-serif;
-      background: #fdfdfd;
-      color: #222;
-      scroll-behavior: smooth;
+      background: #f8fafc;
+      color: #1f2937;
+      line-height: 1.6;
     }
 
     header {
-      padding: 4rem 2rem;
-      text-align: center;
       background: linear-gradient(to right, #4f46e5, #3b82f6);
       color: white;
+      padding: 5rem 2rem;
+      text-align: center;
+      position: relative;
     }
 
     header h1 {
-      font-size: 2.5rem;
+      font-size: 3rem;
       margin-bottom: 0.5rem;
     }
 
     header p {
       font-size: 1.2rem;
-      margin-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .hero-img {
+      max-width: 400px;
+      margin: auto;
+      margin-bottom: 2rem;
     }
 
     .btn {
       background: white;
       color: #3b82f6;
-      padding: 0.8rem 1.5rem;
+      padding: 0.9rem 1.5rem;
       border-radius: 8px;
       text-decoration: none;
       font-weight: 600;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #e0e7ff;
     }
 
     section {
       padding: 4rem 2rem;
-      max-width: 960px;
+      max-width: 1080px;
       margin: auto;
     }
 
-    .features, .pricing, .testimonials {
+    h2 {
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 2rem;
+      color: #1e40af;
+    }
+
+    .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 2rem;
@@ -56,24 +75,54 @@
     .card {
       background: white;
       padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+      border-radius: 1rem;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card strong {
+      font-size: 1.1rem;
+      display: block;
+      margin-bottom: 0.5rem;
+      color: #2563eb;
     }
 
     footer {
       text-align: center;
       padding: 2rem;
-      background: #f3f4f6;
       font-size: 0.9rem;
-      color: #555;
+      background: #f1f5f9;
+      color: #6b7280;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25D366;
+      color: white;
+      border-radius: 50%;
+      width: 56px;
+      height: 56px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      z-index: 1000;
+    }
+
+    .whatsapp-float:hover {
+      background: #1ebe57;
     }
 
     @media (max-width: 600px) {
       header h1 {
-        font-size: 2rem;
-      }
-      .btn {
-        padding: 0.7rem 1.2rem;
+        font-size: 2.2rem;
       }
     }
   </style>
@@ -82,63 +131,79 @@
 
   <header>
     <h1>MicroSME Store</h1>
-    <p>Launch your business online with a custom subdomain and free email – all in minutes.</p>
-    <a href="https://wa.me/60123456789" class="btn">Get Started on WhatsApp</a>
+    <p>Affordable websites & email for micro businesses in Malaysia</p>
+    <img src="https://source.unsplash.com/400x250/?small-business" alt="SME" class="hero-img">
+    <a href="https://wa.me/601175601618" class="btn">Get Started on WhatsApp</a>
   </header>
 
   <section>
     <h2>What You Get</h2>
-    <div class="features">
-      <div class="card"><strong>📄 Custom Page</strong><br/>Your own `yourbiz.microsme.store`</div>
-      <div class="card"><strong>📧 Email Included</strong><br/>E.g., `clinicname@microsme.store`</div>
-      <div class="card"><strong>🚀 Fast Setup</strong><br/>We go live in 24 hours</div>
-      <div class="card"><strong>💰 Affordable</strong><br/>RM99 one-time or RM10/month</div>
+    <div class="grid">
+      <div class="card">
+        <strong>📄 Your Own Page</strong>
+        KlinikLim.microsme.store or yourbrand.microsme.store
+      </div>
+      <div class="card">
+        <strong>📧 Free Email</strong>
+        E.g., kliniklim@microsme.store
+      </div>
+      <div class="card">
+        <strong>🚀 Fast Setup</strong>
+        Go live in just 24–48 hours
+      </div>
+      <div class="card">
+        <strong>💼 Affordable</strong>
+        From only RM99, one-time payment
+      </div>
     </div>
   </section>
 
   <section>
-    <h2>Pricing Plans</h2>
-    <div class="pricing">
+    <h2>Pricing</h2>
+    <div class="grid">
       <div class="card">
         <h3>Starter</h3>
-        <p>RM99 one-time</p>
+        <p>RM99 (one-time)</p>
         <ul>
-          <li>✅ 1 landing page</li>
-          <li>✅ Free email address</li>
-          <li>✅ Hosting & subdomain</li>
+          <li>✅ 1-page site + hosting</li>
+          <li>✅ Email address</li>
+          <li>✅ Subdomain</li>
         </ul>
       </div>
       <div class="card">
-        <h3>Growth</h3>
+        <h3>Pro</h3>
         <p>RM10/month</p>
         <ul>
-          <li>✅ Priority updates</li>
-          <li>✅ Content change anytime</li>
-          <li>✅ Extra email support</li>
+          <li>✅ Priority support</li>
+          <li>✅ Content updates</li>
+          <li>✅ Extra email options</li>
         </ul>
       </div>
     </div>
   </section>
 
   <section>
-    <h2>Success Stories</h2>
-    <div class="testimonials">
-      <div class="card">“Within 2 days we had a working website. Now our clinic is searchable on Google!” <br/>– Klinik Lim</div>
-      <div class="card">“Super affordable and professional. My clients can now find me easily.”<br/>– Ahmad Repair</div>
+    <h2>Testimonials</h2>
+    <div class="grid">
+      <div class="card">“Now our customers can find us easily online. Thank you!”<br>– Klinik Lim</div>
+      <div class="card">“Looks professional, very fast service. Highly recommend.”<br>– Cikgu Tuition</div>
     </div>
   </section>
 
-  <section>
-    <h2>Let’s Talk</h2>
-    <p style="text-align:center;">Ready to grow your small business online? Send us a message on WhatsApp.</p>
-    <div style="text-align:center; margin-top: 1rem;">
-      <a href="https://wa.me/60123456789" class="btn">Chat Now</a>
-    </div>
+  <section style="text-align:center;">
+    <h2>Let’s Launch Your Site</h2>
+    <p>Start today. No hidden fees. Built by Malaysians for Malaysians.</p>
+    <a href="https://wa.me/601175601618" class="btn" style="margin-top: 1rem;">Chat on WhatsApp</a>
   </section>
 
   <footer>
-    &copy; 2025 MicroSME Store · Built with 💙 in Malaysia
+    &copy; 2025 MicroSME Store. Built with 💙 in Malaysia.
   </footer>
 
+  <a href="https://wa.me/601175601618" class="whatsapp-float" title="Chat on WhatsApp">
+    <i data-feather="message-circle"></i>
+  </a>
+
+  <script>feather.replace()</script>
 </body>
 </html>
