@@ -1,4 +1,4 @@
-/* Reset & Base */
+/* General Reset */
 * {
   margin: 0;
   padding: 0;
@@ -7,165 +7,193 @@
 
 body {
   font-family: 'Inter', sans-serif;
-  line-height: 1.6;
+  background-color: #f9f9f9;
   color: #222;
-  background-color: #fff;
+  line-height: 1.6;
 }
 
-a {
-  color: #007bff;
-  text-decoration: none;
-}
-
+/* Container */
 .container {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
 }
 
 /* Header */
 .header {
-  background-color: #f8f9fa;
-  padding: 1.5rem 0;
+  background: #ffffff;
   border-bottom: 1px solid #eee;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
-.header h1 {
-  font-size: 2rem;
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
   font-weight: 800;
+  font-size: 1.5rem;
+}
+
+.logo span {
+  color: #0070f3;
+}
+
+/* Navigation */
+nav a {
+  margin-left: 2rem;
+  text-decoration: none;
   color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease;
 }
 
-.header span {
-  color: #007bff;
+nav a:hover {
+  color: #0070f3;
 }
 
-.header nav {
-  margin-top: 0.75rem;
-}
-
-.header nav a {
-  margin: 0 1rem;
-  font-weight: 600;
-  color: #444;
-}
-
-/* Hero */
+/* Hero Section */
 .hero {
-  background: #eaf4ff;
-  padding: 4rem 2rem;
+  background: linear-gradient(to right, #0070f3, #00c6ff);
+  color: white;
+  text-align: center;
+  padding: 4rem 1rem;
 }
 
 .hero h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
+  font-weight: 800;
   margin-bottom: 1rem;
 }
 
-.hero p {
-  font-size: 1.125rem;
+.hero .subtitle {
+  font-size: 1.2rem;
   margin-bottom: 2rem;
 }
 
 .cta {
-  background: #007bff;
-  color: white;
-  padding: 0.75rem 1.5rem;
-  border-radius: 8px;
-  font-weight: 600;
   display: inline-block;
-  transition: 0.3s ease;
+  background-color: #fff;
+  color: #0070f3;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: background 0.3s ease;
 }
 
 .cta:hover {
-  background: #005dc1;
+  background-color: #e6f0ff;
+}
+
+.cta.small {
+  font-size: 0.9rem;
+  padding: 0.6rem 1.2rem;
 }
 
 /* Sections */
 .section {
-  padding: 3rem 2rem;
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.section.alt {
+  background-color: #f0f4f8;
 }
 
 .section h3 {
-  font-size: 1.75rem;
-  margin-bottom: 1rem;
+  font-size: 2rem;
+  margin-bottom: 2rem;
 }
 
-.section p {
-  font-size: 1rem;
-  margin-bottom: 1rem;
-}
-
-.section.light {
-  background-color: #f9f9f9;
-}
-
-/* Features List */
+/* Features Grid */
 .features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.feature {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  max-width: 300px;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.feature:hover {
+  transform: translateY(-5px);
+}
+
+.feature img {
+  height: 48px;
+  margin-bottom: 1rem;
+}
+
+.feature h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+/* Pricing */
+.pricing-box {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  display: inline-block;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.pricing-box p {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.pricing-box ul {
   list-style: none;
-  padding: 0;
-  margin-top: 1rem;
+  margin-bottom: 1.5rem;
 }
 
-.features li {
-  margin-bottom: 0.75rem;
-  font-size: 1.1rem;
-}
-
-/* Pricing List */
-#pricing ul {
-  list-style: none;
-  margin-top: 1rem;
-  padding: 0;
-}
-
-#pricing li {
+.pricing-box li {
   margin-bottom: 0.5rem;
 }
 
-/* CTA Section */
-.cta-section {
-  background: #007bff;
-  color: white;
-}
-
-.cta-section h3,
-.cta-section p {
-  color: white;
-}
-
-.cta-section .cta {
-  background: #fff;
-  color: #007bff;
-  font-weight: 600;
-}
-
-.cta-section .cta:hover {
-  background: #e0e0e0;
-}
-
 /* Footer */
-.footer {
-  background-color: #f1f1f1;
-  padding: 1rem;
+footer {
+  background: #111;
+  color: #bbb;
   text-align: center;
-  font-size: 0.875rem;
-  color: #777;
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
+  margin-top: 2rem;
 }
 
 /* Responsive */
-@media (max-width: 600px) {
-  .header nav a {
-    display: block;
-    margin: 0.5rem 0;
+@media (max-width: 768px) {
+  .features {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav a {
+    margin-left: 1rem;
   }
 
   .hero h2 {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 
-  .cta {
-    width: 100%;
-    box-sizing: border-box;
+  .section h3 {
+    font-size: 1.5rem;
   }
 }
