@@ -1,495 +1,172 @@
-/* --- Global Styles & Variables --- */
-:root {
-    /* Colors */
-    --primary-color: #007bff;     /* A vibrant blue for main elements */
-    --secondary-color: #6c757d;   /* A darker grey for subtext */
-    --accent-color: #28a745;      /* A green for success/CTA */
-    --light-bg: #f8f9fa;          /* Light background for sections */
-    --dark-bg: #343a40;           /* Dark background for hero/footer */
-    --text-light: #ffffff;        /* White text on dark backgrounds */
-    --text-dark: #333333;         /* Dark grey text on light backgrounds */
-
-    /* Fonts (use system fonts or link Google Fonts in HTML <head>) */
-    --font-primary: 'Arial', sans-serif; /* Fallback for general text */
-    --font-heading: 'Helvetica Neue', sans-serif; /* Fallback for headlines */
-}
-
 /* --- Base Styles --- */
-* {
+body {
+    font-family: Arial, sans-serif; /* Simple, web-safe font */
+    line-height: 1.6;
+    color: #333;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: var(--font-primary);
-    line-height: 1.6;
-    color: var(--text-dark);
-    background-color: var(--light-bg);
-    -webkit-font-smoothing: antialiased; /* Better font rendering */
+    background-color: #f4f4f4; /* Light grey background */
 }
 
 .container {
-    max-width: 1000px; /* Wider for your marketing page */
-    margin: 0 auto;
+    max-width: 800px; /* Keep content focused */
+    margin: 40px auto; /* Center with some top/bottom space */
     padding: 20px;
+    background-color: #fff; /* White content background */
+    box-shadow: 0 0 15px rgba(0,0,0,0.1); /* Subtle shadow */
+    border-radius: 8px; /* Slightly rounded corners */
+    text-align: center; /* Center everything */
 }
 
-/* --- Reusable Section Styles --- */
-.section {
-    padding: 80px 20px; /* More padding for a cleaner look */
-    text-align: center;
-}
-
-.section.colored-bg {
-    background-color: var(--dark-bg);
-    color: var(--text-light);
-}
-
-.section.colored-bg h2,
-.section.colored-bg p,
-.section.colored-bg a,
-.section.colored-bg h3 {
-    color: var(--text-light);
-}
-
-h1, h2 {
-    font-family: var(--font-heading);
-    color: var(--primary-color);
-    margin-bottom: 25px;
-    line-height: 1.2;
-}
-
-h1 {
-    font-size: 3em; /* Larger hero title */
-    color: var(--text-light); /* Assuming dark hero background */
-}
-
-h2 {
-    font-size: 2.5em;
-}
-
-h3 {
-    font-size: 1.5em;
-    margin-bottom: 15px;
-    color: var(--primary-color);
-}
-
-p {
-    margin-bottom: 20px;
-    font-size: 1.1em;
-    line-height: 1.7;
-}
-
-.subheading {
-    font-size: 1.3em;
-    color: var(--secondary-color);
-    margin-bottom: 40px;
-}
-
-/* --- Hero Section --- */
-.hero {
-    background: var(--dark-bg) url('images/hero-image.jpg') no-repeat center center/cover;
-    color: var(--text-light);
-    padding: 120px 20px;
-    min-height: 550px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.5); /* For text readability over image */
-}
-
-.hero .site-logo {
-    max-width: 200px;
-    height: auto;
+/* --- Header & Logo --- */
+header {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee; /* Separator */
     margin-bottom: 30px;
 }
 
+.logo {
+    max-width: 180px; /* Size your logo appropriately */
+    height: auto;
+}
+
+/* --- Hero Section (Main Content Area) --- */
 .hero h1 {
-    font-size: 3.5em;
-    margin-bottom: 20px;
+    font-size: 2.5em; /* Main headline size */
+    color: #007bff; /* Primary blue for headlines */
+    margin-bottom: 15px;
 }
 
-.hero .subheading {
-    font-size: 1.5em;
-    color: var(--text-light); /* Subheading on hero should be light */
-    max-width: 700px;
+.hero .tagline {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 30px;
 }
 
-/* --- CTA Buttons --- */
+/* --- Value Proposition List --- */
+.value-prop {
+    margin: 40px auto;
+    max-width: 500px; /* Keep list narrower */
+}
+
+.value-prop ul {
+    list-style: none; /* Remove default bullets */
+    padding: 0;
+}
+
+.value-prop li {
+    font-size: 1.1em;
+    padding: 10px 0;
+    border-bottom: 1px dashed #eee; /* Light separator for list items */
+    display: flex; /* Align icon and text */
+    align-items: center;
+    justify-content: center; /* Center content in li */
+}
+
+.value-prop li:last-child {
+    border-bottom: none; /* No border on last item */
+}
+
+.value-prop .icon {
+    color: #28a745; /* Green for checkmark */
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+/* --- Pricing --- */
+.pricing {
+    background-color: #e9f7ef; /* Light green background for pricing */
+    border: 1px solid #d4edda;
+    border-radius: 8px;
+    padding: 25px;
+    margin: 40px auto;
+    max-width: 400px; /* Keep pricing box focused */
+}
+
+.pricing p {
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    line-height: 1.4;
+}
+
+.pricing strong {
+    font-size: 1.2em; /* Emphasize prices */
+    color: #007bff;
+}
+
+.pricing .setup { color: #555; }
+.pricing .monthly { font-size: 1.8em; color: #28a745; font-weight: bold; margin-bottom: 5px; }
+.pricing .annual-save { font-size: 0.9em; color: #777; }
+.pricing .total { font-size: 1.4em; font-weight: bold; color: #007bff; margin-top: 15px; }
+
+
+/* --- CTA Button --- */
 .cta-button {
-    display: inline-block;
-    background-color: var(--accent-color);
-    color: var(--text-light);
-    padding: 18px 35px;
+    display: inline-flex; /* Allows icon next to text */
+    align-items: center;
+    background-color: #28a745; /* Bright green */
+    color: white;
+    padding: 15px 30px;
     text-decoration: none;
-    border-radius: 50px;
+    border-radius: 50px; /* Pill shape */
     font-size: 1.2em;
     font-weight: bold;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition: background-color 0.3s ease;
     margin-top: 30px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* Subtle shadow for pop */
 }
 
 .cta-button:hover {
-    background-color: #218838; /* Slightly darker green */
-    transform: translateY(-2px);
+    background-color: #218838; /* Darker green on hover */
 }
 
-.cta-button.primary-cta {
-    background-color: var(--accent-color);
-}
-
-.cta-button.secondary-cta {
-    background-color: var(--primary-color);
-}
-
-.cta-button.secondary-cta:hover {
-    background-color: #0056b3; /* Slightly darker blue */
-}
-
-/* --- Problem Points Section --- */
-.problem-points {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    margin-top: 50px;
-}
-
-.problem-points .point {
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    text-align: left;
-}
-
-.problem-points .point img {
-    width: 60px;
-    height: 60px;
-    margin-bottom: 15px;
-}
-
-.problem-points .point h3 {
-    color: var(--primary-color);
-    font-size: 1.4em;
-    margin-bottom: 10px;
-}
-
-.problem-points .point p {
-    font-size: 1em;
-    margin-bottom: 0;
-}
-
-.transition-text {
-    margin-top: 50px;
-    font-size: 1.3em;
-    font-weight: bold;
-    color: var(--primary-color);
-}
-
-/* --- Solution Benefits Section --- */
-.solution-benefits {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    margin-top: 50px;
-}
-
-.benefit-item {
-    background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent white on dark background */
-    padding: 30px;
-    border-radius: 10px;
-    text-align: center;
-    border: 1px solid rgba(255,255,255,0.2);
-}
-
-.benefit-item img {
-    width: 70px;
-    height: 70px;
-    margin-bottom: 20px;
-}
-
-.benefit-item h3 {
-    color: var(--text-light); /* White heading on dark background */
-    margin-bottom: 10px;
-}
-
-.benefit-item p {
-    font-size: 1em;
-    color: rgba(255,255,255,0.8); /* Lighter text on dark background */
-    margin-bottom: 0;
-}
-
-/* --- How It Works Section --- */
-.steps-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    margin-top: 50px;
-}
-
-.step-item {
-    background-color: #fff;
-    padding: 35px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    text-align: center;
-    position: relative;
-    padding-top: 80px; /* Space for the number circle */
-}
-
-.step-number {
-    position: absolute;
-    top: -30px; /* Position above the card */
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: var(--primary-color);
-    color: var(--text-light);
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2em;
-    font-weight: bold;
-    border: 5px solid var(--light-bg); /* Matches section background */
-    box-shadow: 0 0 0 5px var(--primary-color); /* Outer ring matching primary color */
-}
-
-.step-item h3 {
-    margin-bottom: 10px;
-}
-
-.step-item p {
-    font-size: 1em;
-    margin-bottom: 0;
-}
-
-/* --- Pricing Section --- */
-.pricing-card {
-    background-color: #fff;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-    max-width: 500px; /* Keep pricing card focused */
-    margin: 50px auto 0;
-    color: var(--text-dark); /* Ensure text is dark on white background */
-    text-align: center;
-}
-
-.pricing-card .plan-name {
-    font-size: 2em;
-    font-weight: bold;
-    color: var(--primary-color);
-    margin-bottom: 20px;
-}
-
-.price-block {
-    margin-bottom: 20px;
-}
-
-.setup-fee {
-    display: block;
-    font-size: 1.3em;
-    margin-bottom: 10px;
-    color: var(--secondary-color);
-}
-
-.monthly-fee {
-    display: block;
-    font-size: 2.5em;
-    font-weight: bold;
-    color: var(--accent-color);
-    line-height: 1;
-}
-
-.monthly-fee strong {
-    font-size: 1.2em; /* Emphasize the RM9.90 */
-}
-
-.save-more {
-    font-size: 1em;
-    color: #555;
-    margin-bottom: 15px;
-}
-
-.total-first-year {
-    font-size: 1.4em;
-    font-weight: bold;
-    color: var(--primary-color);
-    margin-bottom: 30px;
-}
-
-/* --- Testimonials Section --- */
-.testimonial-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    margin-top: 50px;
-}
-
-.testimonial-card {
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.testimonial-img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 20px;
-    border: 3px solid var(--primary-color);
-}
-
-.quote {
-    font-style: italic;
-    font-size: 1.1em;
-    color: #555;
-    margin-bottom: 15px;
-    text-align: center;
-}
-
-.author {
-    font-weight: bold;
-    color: var(--primary-color);
-    font-size: 1em;
-}
-
-/* --- FAQ Section --- */
-.faq-item {
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 25px;
-    margin-bottom: 15px;
-    border-radius: 8px;
-    text-align: left;
-    border: 1px solid rgba(255,255,255,0.2);
-}
-
-.faq-item h3 {
-    font-size: 1.4em;
-    color: var(--text-light);
-    margin-bottom: 10px;
-}
-
-.faq-item p {
-    font-size: 1em;
-    color: rgba(255,255,255,0.8);
-    margin-bottom: 0;
+.cta-button img {
+    width: 28px; /* Icon size */
+    height: 28px;
+    margin-right: 10px; /* Space between icon and text */
 }
 
 /* --- Footer --- */
 footer {
-    background-color: var(--dark-bg);
-    color: var(--text-light);
-    padding: 40px 20px;
-    text-align: center;
+    padding-top: 20px;
+    margin-top: 30px;
+    border-top: 1px solid #eee; /* Separator */
     font-size: 0.9em;
-}
-
-footer p {
-    margin-bottom: 10px;
-    color: rgba(255,255,255,0.8);
+    color: #777;
 }
 
 footer a {
-    color: var(--primary-color);
+    color: #007bff;
     text-decoration: none;
-    transition: color 0.3s ease;
 }
 
 footer a:hover {
-    color: var(--text-light);
     text-decoration: underline;
 }
 
-.social-footer {
-    margin-top: 20px;
-}
-
-.social-footer img {
-    width: 30px;
-    height: 30px;
-    margin: 0 10px;
-    transition: transform 0.2s ease;
-}
-
-.social-footer img:hover {
-    transform: scale(1.1);
-}
-
-/* --- Responsive Design --- */
-@media (max-width: 768px) {
+/* --- Responsive Adjustments --- */
+@media (max-width: 600px) {
+    .container {
+        margin: 20px auto;
+        padding: 15px;
+    }
     h1 {
-        font-size: 2.5em;
-    }
-    h2 {
-        font-size: 2em;
-    }
-    .subheading {
-        font-size: 1.1em;
-    }
-    .hero {
-        padding: 80px 20px;
-    }
-    .cta-button {
-        padding: 15px 25px;
-        font-size: 1.1em;
-    }
-    .section {
-        padding: 60px 15px;
-    }
-    .problem-points, .solution-benefits, .steps-grid, .testimonial-grid {
-        grid-template-columns: 1fr; /* Stack columns on small screens */
-    }
-    .problem-points .point, .benefit-item, .step-item, .testimonial-card {
-        text-align: center; /* Center content when stacked */
-        padding: 25px;
-    }
-    .problem-points .point img {
-        margin: 0 auto 15px; /* Center images */
-    }
-    .step-item {
-        padding-top: 60px;
-    }
-    .step-number {
-        top: -25px;
-        width: 50px;
-        height: 50px;
         font-size: 1.8em;
     }
-    .pricing-card {
-        padding: 30px;
-    }
-    .monthly-fee {
-        font-size: 2em;
-    }
-}
-
-@media (max-width: 480px) {
-    h1 {
-        font-size: 2em;
-    }
-    h2 {
-        font-size: 1.8em;
-    }
-    .hero {
-        min-height: 450px;
-    }
-    .cta-button {
+    .tagline {
         font-size: 1em;
-        padding: 12px 20px;
     }
-    .pricing-card {
-        margin: 30px auto 0;
+    .cta-button {
+        padding: 12px 25px;
+        font-size: 1em;
+    }
+    .value-prop li {
+        font-size: 1em;
+    }
+    .pricing {
+        padding: 20px;
+    }
+    .pricing .monthly {
+        font-size: 1.5em;
     }
 }
