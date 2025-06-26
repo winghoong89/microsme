@@ -3,59 +3,96 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>microsme.store – Affordable Business Websites</title>
+  <title>microsme.store — Websites for Small Business</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --blue: #2563eb;
+      --yellow: #facc15;
+      --gray: #f3f4f6;
+      --text: #111827;
+      --muted: #6b7280;
+    }
+    * {
+      box-sizing: border-box;
+    }
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background: #f9fafb;
       margin: 0;
-      padding: 0;
-      color: #111827;
+      font-family: 'Inter', sans-serif;
+      background: var(--gray);
+      color: var(--text);
     }
     header {
-      background-color: #2563eb;
+      background: var(--blue);
       color: white;
-      padding: 3rem 1rem;
+      padding: 4rem 1rem 3rem;
       text-align: center;
     }
     header h1 {
-      margin: 0;
       font-size: 2.5rem;
+      margin: 0;
+      font-weight: 700;
     }
     header p {
-      font-size: 1.25rem;
-      margin: 1rem 0;
+      font-size: 1.2rem;
+      margin: 1rem 0 2rem;
     }
     .cta-button {
-      background-color: #facc15;
-      color: #111827;
+      background: var(--yellow);
+      color: var(--text);
       padding: 0.75rem 1.5rem;
-      border: none;
-      font-weight: bold;
-      font-size: 1rem;
-      border-radius: 0.5rem;
+      border-radius: 999px;
       text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+    }
+    .cta-button:hover {
+      background: #eab308;
     }
     section {
-      padding: 2rem 1rem;
-      max-width: 800px;
+      max-width: 960px;
       margin: auto;
+      padding: 2rem 1rem;
+    }
+    h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
     }
     .features {
       display: grid;
-      grid-template-columns: 1fr;
-      gap: 1rem;
+      gap: 1.5rem;
     }
     .feature {
       background: white;
       padding: 1.5rem;
       border-radius: 1rem;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      text-align: center;
+    }
+    .feature h3 {
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+    .feature p {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+    .how-it-works ol {
+      max-width: 600px;
+      margin: 0 auto;
+      padding-left: 1rem;
+    }
+    .how-it-works li {
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
     }
     footer {
       text-align: center;
+      font-size: 0.9rem;
+      color: var(--muted);
       padding: 2rem 1rem;
-      color: #6b7280;
     }
     @media(min-width: 640px) {
       .features {
@@ -67,45 +104,45 @@
 <body>
 
   <header>
-    <h1>Your Business, Online in 1 Day</h1>
-    <p>Affordable landing pages for micro & small businesses from RM99</p>
-    <a class="cta-button" href="https://wa.me/601175601618" target="_blank">Get Started on WhatsApp</a>
+    <h1>Your Business Online — Fast & Affordable</h1>
+    <p>Beautiful, mobile-ready landing pages from just RM99 for micro & small businesses in Malaysia.</p>
+    <a class="cta-button" href="https://wa.me/60123456789" target="_blank">Get Started on WhatsApp</a>
   </header>
 
   <section>
-    <h2>Why microsme.store?</h2>
+    <h2>Why Choose microsme.store?</h2>
     <div class="features">
       <div class="feature">
-        <strong>✅ Custom Domain</strong>
-        <p>Your own brand name online (like myshop.com)</p>
+        <h3>🌐 Custom Domain</h3>
+        <p>Your brand on the web — with your own name (like yourshop.com)</p>
       </div>
       <div class="feature">
-        <strong>✅ No Tech Needed</strong>
-        <p>We handle design, hosting & updates for you</p>
+        <h3>⚡ No Hassle Setup</h3>
+        <p>We handle design, hosting & updates — no tech skills needed</p>
       </div>
       <div class="feature">
-        <strong>✅ Starts from RM99</strong>
-        <p>One-time fee, super affordable for any SME</p>
+        <h3>💰 One-Time Fee</h3>
+        <p>Only RM99 to launch — maintain for RM10/month or host free on GitHub</p>
       </div>
     </div>
   </section>
 
-  <section>
+  <section class="how-it-works">
     <h2>How It Works</h2>
     <ol>
-      <li>Send your business info via WhatsApp</li>
-      <li>We design & set up your landing page</li>
-      <li>Your business is live in 1–3 days</li>
+      <li>📲 Send your business info via WhatsApp or Google Form</li>
+      <li>🎨 We design your landing page (24–72 hours)</li>
+      <li>🚀 Your site goes live with your domain & contact info</li>
     </ol>
   </section>
 
   <section>
-    <h2>Example Landing Page</h2>
-    <p><a href="https://www.microsme.store/demo-bakery" target="_blank">See a demo site &rarr;</a></p>
+    <h2>See a Demo</h2>
+    <p style="text-align:center;"><a href="https://www.microsme.store/demo-bakery" target="_blank">View sample business website &rarr;</a></p>
   </section>
 
   <footer>
-    <p>&copy; 2025 microsme.store | Empowering Malaysian micro SMEs</p>
+    <p>&copy; 2025 microsme.store — Built to Empower Malaysian Entrepreneurs</p>
   </footer>
 
 </body>
